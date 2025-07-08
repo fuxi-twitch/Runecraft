@@ -30,7 +30,7 @@ jobs:
         run: |
           git add -f Runecraft_Resourcepack.zip
           git commit -m "Add zipped folder"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:master
         
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
