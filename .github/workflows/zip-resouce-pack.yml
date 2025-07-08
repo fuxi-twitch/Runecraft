@@ -28,7 +28,7 @@ jobs:
 
       - name: Commit and push ZIP file
         run: |
-          git add Runecraft_Resourcepack.zip
+          git add -f Runecraft_Resourcepack.zip
           git commit -m "Add zipped folder"
           git push
         env:
