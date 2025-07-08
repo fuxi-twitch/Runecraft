@@ -2,3 +2,9 @@ name: Runecraft
 version: '1.0'
 main: org.fuxi.runecraft.Runecraft
 api-version: '1.21'
+
+#Commands
+commands:
+  class:
+    description: Set class
+    usage: /<command>
