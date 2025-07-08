@@ -1,9 +1,8 @@
-name: Zip Folder and Push
-
+name: Zip Resource Pack
 on:
   push:
     branches:
-      - main
+      - master
     paths-ignore:
       - Runecraft_Resourcepack.zip
 
