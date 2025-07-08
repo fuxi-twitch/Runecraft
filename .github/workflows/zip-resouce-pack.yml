@@ -24,10 +24,7 @@ jobs:
       - name: Zip the target folder
         run: |
           zip -r Runecraft_Resourcepack.zip runecraftResourcePack/
-
-      - name: Move ZIP to root
-        run: |
-          mv Runecraft_Resourcepack.zip ./Runecraft_Resourcepack.zip
+          
 
       - name: Commit and push ZIP file
         run: |
