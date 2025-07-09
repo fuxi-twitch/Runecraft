@@ -1,9 +1,8 @@
-name: Zip Folder and Push
-
+name: Zip Resource Pack
 on:
   push:
     branches:
-      - main
+      - master
     paths-ignore:
       - Runecraft_Resourcepack.zip
 
@@ -25,15 +24,13 @@ jobs:
       - name: Zip the target folder
         run: |
           zip -r Runecraft_Resourcepack.zip runecraftResourcePack/
-
-      - name: Move ZIP to root
-        run: |
-          mv Runecraft_Resourcepack.zip ./Runecraft_Resourcepack.zip
+          
 
       - name: Commit and push ZIP file
         run: |
-          git add Runecraft_Resourcepack.zip
+          git add -f Runecraft_Resourcepack.zip
           git commit -m "Add zipped folder"
-          git push
+          git push https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }} HEAD:master
+        
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
